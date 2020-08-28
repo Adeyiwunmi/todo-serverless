@@ -14,7 +14,7 @@ const todosTable = process.env.TODOS_TABLE
 export const handler: APIGatewayProxyHandler = async (event: APIGatewayProxyEvent): Promise<APIGatewayProxyResult> => {
   const todoId = event.pathParameters.todoId
 
-  logger.info("todoId ", todoId)
+  logger.info("todo Id ", todoId)
 
   const authorization = event.headers.Authorization
   const split = authorization.split(' ')
@@ -30,7 +30,7 @@ export const handler: APIGatewayProxyHandler = async (event: APIGatewayProxyEven
         'Access-Control-Allow-Origin': "*"
       },
       body: JSON.stringify({
-        error: 'Todo does not exist'
+        error: 'Todo does not exist!!'
       })
     }
   }
@@ -59,12 +59,11 @@ export const handler: APIGatewayProxyHandler = async (event: APIGatewayProxyEven
       'Access-Control-Allow-Origin': '*',
       'Access-Control-Allow-Credentials': true
     },
-    body:'Item deleted'
+    body:'Item deleted :)'
   }
 }
 
 
-//check if an item exists
 async function todoExists(todoId: string){
   const result = await docClient
     .get({
@@ -75,6 +74,6 @@ async function todoExists(todoId: string){
     })
     .promise()
 
-    logger.info('Get todo: ', result)
+    logger.info('Get todo: =. ', result)
     return !!result.Item
 }
