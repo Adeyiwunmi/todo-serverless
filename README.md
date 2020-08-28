@@ -1,11 +1,8 @@
 # Serverless Development and Deployment (Udacity Project)
 Submission for Udacity Cloud Developer program homework #4.
-This program achieves the following:
-- In this project you will develop an Instagram-like serverless services for uploading, listing, and filtering images. You will begin with building serverless REST APIs using API Gateway and AWS Lambda, a stack of serverless technologies on AWS. You will then implement an API to interact with this application, store data in AWS DynamoDB, S3, and Elasticsearch, secure your application with authentication, and deploy to Amazon Web Services using Serverless framework. These are the hard skills you’ll need to develop serverless applications.
-
-# Usage
+T
 ### Installation
-- Prerequisite: OS -> Windows 10 Home Edition
+- Prerequisite: OS -> Windows 10 Home Edition or any unix system
 - Once the repository has been downloaded, you will need to first install all dependencies by running `npm i`. You will need to repeat this for all `Client`, `Backend` folders.
 - Also, ensure all environment variables are set up in your `~/.profile`.
 - Once this is set up, you can run the command to deploy to AWS Lambda using `sls deploy -v`. This will send the code to AWS to run and set up. 
